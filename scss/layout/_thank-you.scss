@@ -1,0 +1,49 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.container__thankYou-state-start {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+.thankYou-state-start {
+    margin: 0 2rem;
+    padding: 2rem;
+    background-color: v.$Dark-Blue;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.desktop {
+        width: 37.5rem;
+    }
+    
+
+    .selected {
+        background-color: lighten($color: v.$Dark-Blue, $amount: 4);
+        padding: 1rem;
+        margin: 2rem 0;
+        color: v.$Orange;
+
+        border-radius: 5rem;
+        font-size: 1.5rem;
+    }
+
+    .thankYou {
+        color: v.$White;
+        font-size: 2.5rem;
+    }
+
+    .goodBye {
+        color: v.$Medium-Grey;
+        font-size: v.$Font-size-paragraph;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,106 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.container__rating-state-start {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.rating-state-start {
+    margin: 0 2rem;
+    padding: 2rem;
+    background-color: v.$Dark-Blue;
+    border-radius: 1rem;
+    
+    @include m.desktop {
+        width: 37.1rem;
+    }
+    
+    
+    .start {
+        width: 4rem;
+        height: 4rem;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        background-color: lighten($color: v.$Dark-Blue, $amount: 4);
+        border-radius: 50%;
+        
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    .question {
+        color: v.$White;
+        letter-spacing: .1rem;
+    }
+    
+    .description {
+        color: v.$Medium-Grey;
+        // background-color: v.$Light-Grey;
+        font-size: v.$Font-size-paragraph;
+        line-height: 1.5;
+    }
+    
+    .rating {
+        display: flex;
+        justify-content: space-between;
+        
+        margin-bottom: 2rem;
+        
+        .number {
+            width: 4.5rem;
+            height: 4.5rem;
+            
+            display: grid;
+            place-content: center;
+            
+            background-color: lighten($color: v.$Dark-Blue, $amount: 4);
+            color: v.$Medium-Grey;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.8rem;
+            
+            cursor: pointer;
+
+            &:hover {
+                background-color: v.$Light-Grey;
+                color: v.$White;
+            }
+
+            &:focus {
+                background-color: v.$Orange;
+                color: v.$White;
+            }
+        }
+    }
+    
+    .btn-submit {
+        width: 100%;
+        
+        background: v.$Orange;
+        border: none;
+        text-transform: uppercase;
+        color: v.$White;
+        padding: 1rem 0;
+        border-radius: 2.5rem;
+        letter-spacing: .1rem;
+        cursor: pointer;
+        
+        &:hover {
+            color: v.$Orange;
+            background-color: v.$White;
+        }
+    }
+}
+.active {
+    background-color: v.$Orange;
+    color: v.$White;
+}

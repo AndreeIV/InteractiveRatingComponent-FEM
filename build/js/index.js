@@ -1,0 +1,2 @@
+const numbers=document.querySelectorAll(".number"),selected=document.getElementById("selected"),btnSubmit=document.getElementById("btn-submit"),ratingState=document.querySelector(".container__rating-state-start"),thankYouState=document.querySelector(".container__thankYou-state-start");numbers.forEach((e=>{e.addEventListener("click",(()=>{btnSubmit.addEventListener("click",(()=>{selected.innerText=e.innerText,ratingState.style.display="none",thankYouState.style.display="flex"}))}))}));
+//# sourceMappingURL=index.js.map
